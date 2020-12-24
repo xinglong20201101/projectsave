@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("公司沿革", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("禮儀服務", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <select name="URL" onchange="window.location.href=this.form.URL.options[this.form.URL.selectedIndex].value">
+                    <option>
+                        @Html.ActionLink("服務內容", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </option>
+                    <option>
+                        @Html.ActionLink("服務案例與客戶評價", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </option>
+                    <option>
+                        @Html.ActionLink("大體服務", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </option>
+                    <option>
+                        @Html.ActionLink("禮儀諮詢", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </option>
+                </select>
+                @Html.ActionLink("塔位銷售", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("遷葬撿骨", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("堪輿擇日", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
